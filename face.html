@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bell's Palsy Probability Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bell's Palsy Check</h1>
+        <p class="subtitle">Upload or capture a photo to check probability</p>
+        
+        <div class="camera-box">
+            <video id="camera" autoplay playsinline></video>
+            <img id="preview" alt="Preview">
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn" class="btn secondary">
+                <i class="icon">📷</i> Start Camera
+            </button>
+            <button id="analyzeBtn" class="btn primary" disabled>
+                <i class="icon">🔍</i> Check Probability
+            </button>
+            <button id="uploadBtn" class="btn secondary">
+                <i class="icon">🖼️</i> Upload Photo
+            </button>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+        
+        <div class="results">
+            <div class="probability-meter">
+                <div class="meter-bar">
+                    <div id="probabilityBar" class="probability-level"></div>
+                </div>
+                <div id="probabilityText" class="probability-text">0% probability</div>
+            </div>
+            <div id="resultDetails" class="result-details">
+                Take or upload a photo to begin analysis
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.roboflow.com/0.2.22/roboflow.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
